@@ -1,0 +1,137 @@
+# `U` is a predefined unit of measure that means 19.05mm, which is MX spacing
+# cx and cy used for Kailh switches
+units:
+  px: cx + 3
+  py: cy + 3
+points:
+  zones:
+    matrix:
+      anchor.shift: [160, -170]
+      key:
+        padding: 1cy
+        spread: 1cx
+      columns:
+        pinky:
+          rows.bottom.skip: true
+          rows.top.skip: true
+        ring.key.stagger: 0.3cy
+        middle.key.stagger: 0.15cy
+        index.key.stagger: 0.15cy
+        inner:
+          key:
+            stagger: -0.15cy
+            splay: -1
+            spread: cx + .3
+        innerReach:
+          key.stagger: -0.35cy
+          rows.bottom.skip: true
+          rows.top.skip: true
+      rows:
+        bottom.padding: cy
+        home.padding: cy
+        top.padding: cy
+    thumb:
+      anchor:
+        ref: matrix_inner_bottom
+        shift: [1.08cx, -1.2cy]
+        rotate: -3
+      columns:
+        tucky:
+          key.name: thumb_tucky
+        reachy:
+          key.width: cx
+          key.spread: cx
+          key.splay: -15
+          key.shift: [0.15cx,-3]
+          key.name: thumb_reachy
+outlines:
+  raw:
+    - what: rectangle
+      where: true
+      size: [cx, cy]
+  keys:
+    - what: rectangle
+      where: true
+      size: [cx-0.5,cy-0.5]
+  board:
+    - what: polygon
+      operation: stack
+      points:
+        - ref: matrix_pinky_home
+          shift: [-0.5px, -0.5py]
+        - ref: matrix_pinky_home
+          shift: [-0.5px, 0.5py]
+        - ref: matrix_pinky_home
+          shift: [0.35px, 0.5py]
+        - ref: matrix_ring_top
+          shift: [-0.5px, 0.5py]
+        - ref: matrix_middle_top
+          shift: [-0.5px, 0.5py]
+        - ref: matrix_index_top
+          shift: [-0.5px, 0.5py]
+        - ref: matrix_index_top
+          shift: [0.5px, 0.5py]
+        - ref: matrix_inner_top
+          shift: [0.5px, 0.5py]
+        - ref: matrix_innerReach_home
+          shift: [-0.35px, 0.5py]
+        - ref: matrix_innerReach_home
+          shift: [1.62px, 0.5py]
+        - ref: thumb_reachy
+          shift: [0.5px, 0.5py]
+        - ref: thumb_reachy
+          shift: [0.5px, -0.5py]
+        - ref: thumb_reachy
+          shift: [-0.5px, -0.5py]
+        - ref: thumb_tucky
+          shift: [-0.5px, -0.5py]
+        - ref: thumb_tucky
+          shift: [-0.5px, 0.5py]
+        - ref: matrix_inner_bottom
+          shift: [-0.5px, -0.5py]
+        - ref: matrix_middle_bottom
+          shift: [0.5px, -0.5py]
+        - ref: matrix_ring_bottom
+          shift: [0.5px, -0.5py]
+        - ref: matrix_ring_bottom
+          shift: [-0.5px, -0.5py]
+        - ref: matrix_pinky_home
+          shift: [0.35px, -0.5py]
+      fillet: 4
+
+  combo:
+      - name: board
+      - operation: subtract
+        name: keys
+pcbs:
+  custom_split:
+    outlines:
+      main:
+        outline: board
+    footprints:
+      choc_hotswap:
+        what: choc
+        where: true
+        params:
+          keycaps: true
+          reverse: true
+          hotswap: true
+          from: "{{column_net}}"
+          to: "{{colrow}}"
+      promicro:
+        what: promicro
+        params:
+          orientation: "up"
+        where:
+          ref: matrix_innerReach_home
+          rotate: -90
+          shift: [1px,-0.45py]
+      reset:
+        what: button
+        params:
+          from: GND
+          to: RST
+        where:
+          ref: matrix_innerReach_home
+          shift: [0, -1]
+          rotate: -90
