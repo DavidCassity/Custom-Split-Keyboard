@@ -1687,7 +1687,7 @@
 
         
       (module ProMicro (layer F.Cu) (tedit 5B307E4C)
-      (at 271.3298375 160.9809561 -91)
+      (at 269.8851056 159.52051959999997 -91)
 
       
       (fp_text reference "MCU1" (at 0 0) (layer F.SilkS) hide (effects (font (size 1.27 1.27) (thickness 0.15))))
@@ -1773,7 +1773,7 @@
         (descr "Low-profile SMD Tactile Switch, https://www.e-switch.com/product-catalog/tact/product-lines/tl3342-series-low-profile-smt-tact-switch")
         (tags "SPST Tactile Switch")
 
-        (at 250.4901076 151.61582629999998 -1)
+        (at 281.4591881 177.1502003 89)
         
         (fp_text reference "B1" (at 0 0) (layer F.SilkS) hide (effects (font (size 1.27 1.27) (thickness 0.15))))
         (fp_text value "" (at 0 0) (layer F.SilkS) hide (effects (font (size 1.27 1.27) (thickness 0.15))))
@@ -1789,10 +1789,10 @@
         (fp_line (start -2.75 -1.25) (end -2.75 1.25) (layer F.SilkS) (width 0.15))
         
         
-        (pad 1 smd rect (at -3.1 -1.85 -1) (size 1.8 1.1) (layers F.Cu F.Paste F.Mask) (net 2 "GND"))
-        (pad 1 smd rect (at 3.1 -1.85 -1) (size 1.8 1.1) (layers F.Cu F.Paste F.Mask) (net 2 "GND"))
-        (pad 2 smd rect (at -3.1 1.85 -1) (size 1.8 1.1) (layers F.Cu F.Paste F.Mask) (net 19 "RST"))
-        (pad 2 smd rect (at 3.1 1.85 -1) (size 1.8 1.1) (layers F.Cu F.Paste F.Mask) (net 19 "RST"))
+        (pad 1 smd rect (at -3.1 -1.85 89) (size 1.8 1.1) (layers F.Cu F.Paste F.Mask) (net 2 "GND"))
+        (pad 1 smd rect (at 3.1 -1.85 89) (size 1.8 1.1) (layers F.Cu F.Paste F.Mask) (net 2 "GND"))
+        (pad 2 smd rect (at -3.1 1.85 89) (size 1.8 1.1) (layers F.Cu F.Paste F.Mask) (net 19 "RST"))
+        (pad 2 smd rect (at 3.1 1.85 89) (size 1.8 1.1) (layers F.Cu F.Paste F.Mask) (net 19 "RST"))
     )
     
     
@@ -1800,7 +1800,7 @@
         
         (module E73:SPDT_C128955 (layer F.Cu) (tstamp 5BF2CC3C)
 
-            (at 250.4901076 151.61582629999998 -1)
+            (at 282.8851729 152.1812843 -91)
 
             
             (fp_text reference "T1" (at 0 0) (layer F.SilkS) hide (effects (font (size 1.27 1.27) (thickness 0.15))))
@@ -1824,22 +1824,22 @@
             (pad "" np_thru_hole circle (at -1.5 0) (size 1 1) (drill 0.9) (layers *.Cu *.Mask))
 
             
-            (pad 1 smd rect (at 2.25 2.075 -1) (size 0.9 1.25) (layers F.Cu F.Paste F.Mask) (net 2 "GND"))
-            (pad 2 smd rect (at -0.75 2.075 -1) (size 0.9 1.25) (layers F.Cu F.Paste F.Mask) (net 20 "VCC"))
-            (pad 3 smd rect (at -2.25 2.075 -1) (size 0.9 1.25) (layers F.Cu F.Paste F.Mask))
+            (pad 1 smd rect (at 2.25 2.075 -91) (size 0.9 1.25) (layers F.Cu F.Paste F.Mask) (net 2 "GND"))
+            (pad 2 smd rect (at -0.75 2.075 -91) (size 0.9 1.25) (layers F.Cu F.Paste F.Mask) (net 20 "VCC"))
+            (pad 3 smd rect (at -2.25 2.075 -91) (size 0.9 1.25) (layers F.Cu F.Paste F.Mask))
             
             
-            (pad "" smd rect (at 3.7 -1.1 -1) (size 0.9 0.9) (layers F.Cu F.Paste F.Mask))
-            (pad "" smd rect (at 3.7 1.1 -1) (size 0.9 0.9) (layers F.Cu F.Paste F.Mask))
-            (pad "" smd rect (at -3.7 1.1 -1) (size 0.9 0.9) (layers F.Cu F.Paste F.Mask))
-            (pad "" smd rect (at -3.7 -1.1 -1) (size 0.9 0.9) (layers F.Cu F.Paste F.Mask))
+            (pad "" smd rect (at 3.7 -1.1 -91) (size 0.9 0.9) (layers F.Cu F.Paste F.Mask))
+            (pad "" smd rect (at 3.7 1.1 -91) (size 0.9 0.9) (layers F.Cu F.Paste F.Mask))
+            (pad "" smd rect (at -3.7 1.1 -91) (size 0.9 0.9) (layers F.Cu F.Paste F.Mask))
+            (pad "" smd rect (at -3.7 -1.1 -91) (size 0.9 0.9) (layers F.Cu F.Paste F.Mask))
         )
         
         
 
     (module "MountingHole_2.2mm_M2_Pad_Via" (version 20210722) (generator pcbnew) (layer "F.Cu")
       (tedit 56DDB9C7)
-      (at 160 153 0) 
+      (at 169.9 156.23 0) 
     
       (fp_text reference "_1" (at 0 -3.2) (layer "F.SilkS") hide 
         (effects (font (size 1 1) (thickness 0.15)))
@@ -1857,17 +1857,90 @@
       (pad "1" thru_hole circle locked (at 1.65 0) (size 0.7 0.7) (drill 0.4) (layers *.Cu *.Mask) (tstamp cde0acf2-b3b4-46de-9f6e-3ab519744000))
       (pad "1" thru_hole circle locked (at 0 -1.65) (size 0.7 0.7) (drill 0.4) (layers *.Cu *.Mask) (tstamp ff0de415-ae11-46fb-b780-c24aee621212))
     )
+
+    (module "MountingHole_2.2mm_M2_Pad_Via" (version 20210722) (generator pcbnew) (layer "F.Cu")
+      (tedit 56DDB9C7)
+      (at 225.4977132 118.87466229999997 -1) 
+    
+      (fp_text reference "_2" (at 0 -3.2) (layer "F.SilkS") hide 
+        (effects (font (size 1 1) (thickness 0.15)))
+        (tstamp b68bb25c-687d-44b1-b966-dad4cac66b35)
+      )
+    
+      (fp_circle (center 0 0) (end 2.45 0) (layer "F.CrtYd") (width 0.05) (fill none) (tstamp b2688462-c375-45d3-9095-3425fb17c88f))
+      (pad "1" thru_hole circle locked (at 1.166726 1.166726) (size 0.7 0.7) (drill 0.4) (layers *.Cu *.Mask) (tstamp 2a7fc905-328f-4bbb-9222-ca8d15d03a86))
+      (pad "1" thru_hole circle locked (at 0 0) (size 4.4 4.4) (drill 2.2) (layers *.Cu *.Mask) (tstamp 47ee1d53-0551-4b6d-bc24-3f3f14c73c36))
+      (pad "1" thru_hole circle locked (at 0 1.65) (size 0.7 0.7) (drill 0.4) (layers *.Cu *.Mask) (tstamp 4eef65bc-4add-40d7-8319-14dcdbae0d44))
+      (pad "1" thru_hole circle locked (at 1.166726 -1.166726) (size 0.7 0.7) (drill 0.4) (layers *.Cu *.Mask) (tstamp 56155f4d-2ebc-4ad4-8d82-7aa7846deba8))
+      (pad "1" thru_hole circle locked (at -1.65 0) (size 0.7 0.7) (drill 0.4) (layers *.Cu *.Mask) (tstamp 787d6162-1d3c-4def-859e-6532ce27c1ef))
+      (pad "1" thru_hole circle locked (at -1.166726 -1.166726) (size 0.7 0.7) (drill 0.4) (layers *.Cu *.Mask) (tstamp 8d699d12-7099-4814-bbe6-11bc74c6e8b2))
+      (pad "1" thru_hole circle locked (at -1.166726 1.166726) (size 0.7 0.7) (drill 0.4) (layers *.Cu *.Mask) (tstamp 95ab0420-a56b-46ee-98ad-5072a1a93a6f))
+      (pad "1" thru_hole circle locked (at 1.65 0) (size 0.7 0.7) (drill 0.4) (layers *.Cu *.Mask) (tstamp cde0acf2-b3b4-46de-9f6e-3ab519744000))
+      (pad "1" thru_hole circle locked (at 0 -1.65) (size 0.7 0.7) (drill 0.4) (layers *.Cu *.Mask) (tstamp ff0de415-ae11-46fb-b780-c24aee621212))
+    )
+
+    (module "MountingHole_2.2mm_M2_Pad_Via" (version 20210722) (generator pcbnew) (layer "F.Cu")
+      (tedit 56DDB9C7)
+      (at 242.0501467 171.0214842 -1) 
+    
+      (fp_text reference "_3" (at 0 -3.2) (layer "F.SilkS") hide 
+        (effects (font (size 1 1) (thickness 0.15)))
+        (tstamp b68bb25c-687d-44b1-b966-dad4cac66b35)
+      )
+    
+      (fp_circle (center 0 0) (end 2.45 0) (layer "F.CrtYd") (width 0.05) (fill none) (tstamp b2688462-c375-45d3-9095-3425fb17c88f))
+      (pad "1" thru_hole circle locked (at 1.166726 1.166726) (size 0.7 0.7) (drill 0.4) (layers *.Cu *.Mask) (tstamp 2a7fc905-328f-4bbb-9222-ca8d15d03a86))
+      (pad "1" thru_hole circle locked (at 0 0) (size 4.4 4.4) (drill 2.2) (layers *.Cu *.Mask) (tstamp 47ee1d53-0551-4b6d-bc24-3f3f14c73c36))
+      (pad "1" thru_hole circle locked (at 0 1.65) (size 0.7 0.7) (drill 0.4) (layers *.Cu *.Mask) (tstamp 4eef65bc-4add-40d7-8319-14dcdbae0d44))
+      (pad "1" thru_hole circle locked (at 1.166726 -1.166726) (size 0.7 0.7) (drill 0.4) (layers *.Cu *.Mask) (tstamp 56155f4d-2ebc-4ad4-8d82-7aa7846deba8))
+      (pad "1" thru_hole circle locked (at -1.65 0) (size 0.7 0.7) (drill 0.4) (layers *.Cu *.Mask) (tstamp 787d6162-1d3c-4def-859e-6532ce27c1ef))
+      (pad "1" thru_hole circle locked (at -1.166726 -1.166726) (size 0.7 0.7) (drill 0.4) (layers *.Cu *.Mask) (tstamp 8d699d12-7099-4814-bbe6-11bc74c6e8b2))
+      (pad "1" thru_hole circle locked (at -1.166726 1.166726) (size 0.7 0.7) (drill 0.4) (layers *.Cu *.Mask) (tstamp 95ab0420-a56b-46ee-98ad-5072a1a93a6f))
+      (pad "1" thru_hole circle locked (at 1.65 0) (size 0.7 0.7) (drill 0.4) (layers *.Cu *.Mask) (tstamp cde0acf2-b3b4-46de-9f6e-3ab519744000))
+      (pad "1" thru_hole circle locked (at 0 -1.65) (size 0.7 0.7) (drill 0.4) (layers *.Cu *.Mask) (tstamp ff0de415-ae11-46fb-b780-c24aee621212))
+    )
+
+    
+    (module JST_PH_S2B-PH-K_02x2.00mm_Angled (layer F.Cu) (tedit 58D3FE32)
+
+        (descr "JST PH series connector, S2B-PH-K, side entry type, through hole, Datasheet: http://www.jst-mfg.com/product/pdf/eng/ePH.pdf")
+        (tags "connector jst ph")
+
+        (at 255.6816015 163.6082569 -1)
+
+        
+        (fp_text reference "JST1" (at 0 0) (layer F.SilkS) hide (effects (font (size 1.27 1.27) (thickness 0.15))))
+        (fp_text value "" (at 0 0) (layer F.SilkS) hide (effects (font (size 1.27 1.27) (thickness 0.15))))
+
+        (fp_line (start -2.25 0.25) (end -2.25 -1.35) (layer F.SilkS) (width 0.15))
+        (fp_line (start -2.25 -1.35) (end -2.95 -1.35) (layer F.SilkS) (width 0.15))
+        (fp_line (start -2.95 -1.35) (end -2.95 6.25) (layer F.SilkS) (width 0.15))
+        (fp_line (start -2.95 6.25) (end 2.95 6.25) (layer F.SilkS) (width 0.15))
+        (fp_line (start 2.95 6.25) (end 2.95 -1.35) (layer F.SilkS) (width 0.15))
+        (fp_line (start 2.95 -1.35) (end 2.25 -1.35) (layer F.SilkS) (width 0.15))
+        (fp_line (start 2.25 -1.35) (end 2.25 0.25) (layer F.SilkS) (width 0.15))
+        (fp_line (start 2.25 0.25) (end -2.25 0.25) (layer F.SilkS) (width 0.15))
+
+        (fp_line (start -1 1.5) (end -1 2.0) (layer F.SilkS) (width 0.15))
+        (fp_line (start -1.25 1.75) (end -0.75 1.75) (layer F.SilkS) (width 0.15))
+
+        (pad 1 thru_hole rect (at -1 0 -1) (size 1.2 1.7) (drill 0.75) (layers *.Cu *.Mask) (net 18 "RAW"))
+        (pad 2 thru_hole oval (at 1 0 -1) (size 1.2 1.7) (drill 0.75) (layers *.Cu *.Mask) (net 2 "GND"))
+            
+    )
+    
+    
             (gr_line (start 163.40010236974794 163) (end 153.5 163) (angle 90) (layer Edge.Cuts) (width 0.15))
 (gr_line (start 149.5 159) (end 149.5 147) (angle 90) (layer Edge.Cuts) (width 0.15))
 (gr_line (start 153.5 143) (end 163.3770571540724 143) (angle 90) (layer Edge.Cuts) (width 0.15))
 (gr_line (start 167.3769650533983 139.0271487993159) (end 167.47658741695673 124.34945390170833) (angle 90) (layer Edge.Cuts) (width 0.15))
 (gr_line (start 170.91543088653913 120.41614729107363) (end 203.2208617173156 115.83954459004698) (angle 90) (layer Edge.Cuts) (width 0.15))
 (gr_line (start 203.7819261470589 115.80000000000001) (end 224.21405585790058 115.80000000000001) (angle 90) (layer Edge.Cuts) (width 0.15))
-(gr_line (start 224.78303662974082 115.84067419595326) (end 240.09726450455327 118.04142787940151) (angle 90) (layer Edge.Cuts) (width 0.15))
-(gr_line (start 243.52804533380476 122.04442248345731) (end 243.35913550306222 137.5153694396031) (angle 90) (layer Edge.Cuts) (width 0.15))
-(gr_line (start 247.2890875041539 141.558429039613) (end 280.69133411360207 142.14146737834798) (angle 90) (layer Edge.Cuts) (width 0.15))
-(gr_line (start 284.6210964150861 146.19937697690693) (end 284.1063384694903 181.38139542069257) (angle 90) (layer Edge.Cuts) (width 0.15))
-(gr_line (start 283.88884081703964 182.62514937015078) (end 278.8878947752039 197.1489512300975) (angle 90) (layer Edge.Cuts) (width 0.15))
+(gr_line (start 224.78303662974082 115.84067419595326) (end 240.09809044811797 118.04154657283857) (angle 90) (layer Edge.Cuts) (width 0.15))
+(gr_line (start 243.52888147523254 122.04359717473562) (end 243.37214939308592 136.7164188817951) (angle 90) (layer Edge.Cuts) (width 0.15))
+(gr_line (start 247.30211159204075 140.75853447964653) (end 280.7050741788836 141.34158539656676) (angle 90) (layer Edge.Cuts) (width 0.15))
+(gr_line (start 284.63483328037347 145.39971739512112) (end 284.10637233925416 181.38151016229676) (angle 90) (layer Edge.Cuts) (width 0.15))
+(gr_line (start 283.8888778867976 182.6250417117567) (end 278.8878947752039 197.1489512300975) (angle 90) (layer Edge.Cuts) (width 0.15))
 (gr_line (start 273.8035477781525 199.62875273111277) (end 258.16895312552185 194.2453300285776) (angle 90) (layer Edge.Cuts) (width 0.15))
 (gr_line (start 257.26754196753285 194.04754117660661) (end 244.06904106471237 192.7181558040616) (angle 90) (layer Edge.Cuts) (width 0.15))
 (gr_line (start 240.47964646072674 188.45926671746156) (end 241.30811138878607 176.61166649228107) (angle 90) (layer Edge.Cuts) (width 0.15))
@@ -1882,10 +1955,10 @@
 (gr_arc (start 171.4764953162826 124.37660270102788) (end 170.91543091628262 120.41614730102788) (angle -81.54787417589698) (layer Edge.Cuts) (width 0.15))
 (gr_arc (start 203.7819261470589 119.80000000000001) (end 203.7819261470589 115.80000000000001) (angle -8.063244936560992) (layer Edge.Cuts) (width 0.15))
 (gr_arc (start 224.21405585790058 119.80000000000001) (end 224.78303665790057 115.84067420000001) (angle -8.177786800788667) (layer Edge.Cuts) (width 0.15))
-(gr_arc (start 239.52828373271305 122.00075368344827) (end 243.52804533271305 122.04442248344827) (angle -82.4477351126891) (layer Edge.Cuts) (width 0.15))
-(gr_arc (start 247.35889710415387 137.5590382396149) (end 243.35913550415387 137.5153694396149) (angle -89.62552228713338) (layer Edge.Cuts) (width 0.15))
-(gr_arc (start 280.62152451360197 146.14085817834797) (end 284.62109641360195 146.19937697834797) (angle -89.83825032590099) (layer Edge.Cuts) (width 0.15))
-(gr_arc (start 280.1067665680061 181.32287662213275) (end 283.88884086800607 182.62514942213275) (angle -18.161752059786636) (layer Edge.Cuts) (width 0.15))
+(gr_arc (start 239.52910967627778 122.00087237688533) (end 243.52888147627777 122.04359717688533) (angle -82.43421248872524) (layer Edge.Cuts) (width 0.15))
+(gr_arc (start 247.3719211920407 136.7591436796465) (end 243.3721493920407 136.7164188796465) (angle -89.61199966314601) (layer Edge.Cuts) (width 0.15))
+(gr_arc (start 280.6352645788835 145.34097619656671) (end 284.6348332788835 145.3997173965667) (angle -89.84143630079345) (layer Edge.Cuts) (width 0.15))
+(gr_arc (start 280.1068036377643 181.32276896373878) (end 283.8888779377643 182.62504176373878) (angle -18.158566084854613) (layer Edge.Cuts) (width 0.15))
 (gr_arc (start 275.1058205261706 195.84667848207948) (end 273.80354772617056 199.6287527820795) (angle -90.00000000000088) (layer Edge.Cuts) (width 0.15))
 (gr_arc (start 256.8666803775038 198.0274042776109) (end 258.16895317750385 194.2453299776109) (angle -13.248427915355592) (layer Edge.Cuts) (width 0.15))
 (gr_arc (start 244.4699026547413 188.7382927030573) (end 240.4796464547413 188.45926670305732) (angle -88.24842720515312) (layer Edge.Cuts) (width 0.15))

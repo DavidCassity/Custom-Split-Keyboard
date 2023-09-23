@@ -3,6 +3,10 @@
 units:
   px: cx + 3
   py: cy + 3
+  dpx: cx + 6
+  dpy: cy + 6
+  screwSize: 1.5
+  standoffSize: 2.5
 points:
   zones:
     matrix:
@@ -99,9 +103,9 @@ outlines:
         - ref: matrix_inner_top
           shift: [0.5px, 0.5py]
         - ref: matrix_innerReach_home
-          shift: [-0.35px, 0.5py]
+          shift: [-0.35px, 0.54py]
         - ref: matrix_innerReach_home
-          shift: [1.62px, 0.5py]
+          shift: [1.62px, 0.54py]
         - ref: thumb_reachy
           shift: [0.5px, 0.5py]
         - ref: thumb_reachy
@@ -123,11 +127,87 @@ outlines:
         - ref: matrix_pinky_home
           shift: [0.35px, -0.5py]
       fillet: 4
-
+  xlboard:
+    - what: polygon
+      operation: stack
+      points:
+        - ref: matrix_pinky_home
+          shift: [-0.5dpx, -0.5dpy]
+        - ref: matrix_pinky_home
+          shift: [-0.5dpx, 0.5dpy]
+        - ref: matrix_pinky_home
+          shift: [0.35dpx, 0.5dpy]
+        - ref: matrix_ring_top
+          shift: [-0.5dpx, 0.5dpy]
+        - ref: matrix_middle_top
+          shift: [-0.5dpx, 0.5dpy]
+        - ref: matrix_index_top
+          shift: [-0.5dpx, 0.5dpy]
+        - ref: matrix_index_top
+          shift: [0.5dpx, 0.5dpy]
+        - ref: matrix_inner_top
+          shift: [0.5dpx, 0.5dpy]
+        - ref: matrix_innerReach_home
+          shift: [-0.35dpx, 0.54dpy]
+        - ref: matrix_innerReach_home
+          shift: [1.62dpx, 0.54dpy]
+        - ref: thumb_reachy
+          shift: [0.5dpx, 0.5dpy]
+        - ref: thumb_reachy
+          shift: [0.5dpx, -0.5dpy]
+        - ref: thumb_reachy
+          shift: [-0.5dpx, -0.5dpy]
+        - ref: thumb_tucky
+          shift: [-0.5dpx, -0.5dpy]
+        - ref: thumb_tucky
+          shift: [-0.5dpx, 0.5dpy]
+        - ref: matrix_inner_bottom
+          shift: [-0.5dpx, -0.5dpy]
+        - ref: matrix_middle_bottom
+          shift: [0.5dpx, -0.5dpy]
+        - ref: matrix_ring_bottom
+          shift: [0.5dpx, -0.5dpy]
+        - ref: matrix_ring_bottom
+          shift: [-0.5dpx, -0.5dpy]
+        - ref: matrix_pinky_home
+          shift: [0.35dpx, -0.5dpy]
+      fillet: 4
   combo:
       - name: board
       - operation: subtract
         name: keys
+  mounting:
+    - what: circle
+      radius: screwSize
+      where:
+          ref: matrix_pinky_home
+          shift: [0.55cx, -0.19cy]
+    - what: circle
+      radius: screwSize
+      where:
+          ref: matrix_inner_top
+          shift: [-0.42cx, 0.55cy]
+    - what: circle
+      radius: screwSize
+      where:
+          ref: matrix_inner_bottom
+          shift: [0.55cx, -0.5cy]
+  standoff:
+    - what: circle
+      radius: standoffSize
+      where:
+          ref: matrix_pinky_home
+          shift: [0.55cx, -0.19cy]
+    - what: circle
+      radius: standoffSize
+      where:
+          ref: matrix_inner_top
+          shift: [-0.42cx, 0.55cy]
+    - what: circle
+      radius: standoffSize
+      where:
+          ref: matrix_inner_bottom
+          shift: [0.55cx, -0.5cy]
 pcbs:
   custom_split:
     outlines:
@@ -158,7 +238,7 @@ pcbs:
         where:
           ref: matrix_innerReach_home
           rotate: -90
-          shift: [1px,-0.45py]
+          shift: [1.085cx,-0.445cy]
       reset:
         what: button
         params:
@@ -166,15 +246,76 @@ pcbs:
           to: RST
         where:
           ref: matrix_innerReach_home
+          shift: [1.745cx, -1.47cy]
+          rotate: 90
       switch:
         what: slider
         params: 
           from: GND
           to: VCC
         where:
-          ref:
-            matrix_innerReach_home
-      hole:
+          ref: matrix_innerReach_home
+          shift: [1.8cx, 0cy]
+          rotate: -90
+      holeMidLeft:
         what: mountinghole
         where:
           ref: matrix_pinky_home
+          shift: [0.55cx, -0.19cy]
+      holeTopRight:
+        what: mountinghole
+        where:
+          ref: matrix_inner_top
+          shift: [-0.42cx, 0.55cy]
+      holeBottomMid:
+        what: mountinghole
+        where:
+          ref: matrix_inner_bottom
+          shift: [0.55cx, -0.5cy]
+      connector:
+        what: jstph
+        params:
+          pos: RAW
+          neg: GND
+        where:
+          ref: matrix_innerReach_home
+          shift: [0.3cx, -0.70cy]
+cases:
+  bottom:
+    - name: board
+      extrude: 1
+  xlbottom:
+    - name: xlboard
+      extrude: 1
+  _outerwall:
+    - name: xlboard
+      extrude: 4
+  _innerwall:
+    - name: board
+      extrude: 4
+  wall:
+    - what: case
+      name: _outerwall
+      operation: add
+    - what: case
+      name: _innerwall
+      operation: subtract
+  _holes:
+    - name: mounting
+      extrude: 4
+  _standoffs:
+    - name: standoff
+      extrude: 4
+  case:
+    - what: case
+      name: _standoffs
+      operation: add
+    - what: case
+      name: _holes
+      operation: subtract
+    - what: case
+      name: xlbottom
+      operation: add
+    - what: case
+      name: wall
+      operation: add
