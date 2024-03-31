@@ -231,9 +231,8 @@ pcbs:
 #          reverse: true
 #          from: "{{column_net}}"
 #          to: GND
-      promicro:
-        what: promicro
-        params.orientation: "down"
+      microcontroller:
+        what: microcontroller
         where:
           ref: matrix_innerReach_home
           rotate: -90
