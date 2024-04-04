@@ -15,42 +15,42 @@ points:
         padding: 1cy
         spread: 1cx
       columns:
-        pinky:
+        outerReach:
           rows:
             bottom.skip: true
             top.skip: true
-            home.column_net: P5
+            home.column_net: P020
+        pinky:
+          rows:
+            top.column_net: P115
+            home.column_net: P017
+            bottom.column_net: P009
+          key.stagger: 0.3cy
         ring:
           rows:
-            top.column_net: P2
-            home.column_net: P4
-            bottom.column_net: P9
-          key.stagger: 0.3cy
+            top.column_net: P002
+            home.column_net: P011
+            bottom.column_net: P010
+          key.stagger: 0.15cy
         middle:
           rows:
-            top.column_net: P0
-            home.column_net: P3
-            bottom.column_net: P8
+            top.column_net: P008
+            home.column_net: P022
+            bottom.column_net: P111
           key.stagger: 0.15cy
         index:
           rows:
-            top.column_net: P1
-            home.column_net: P10
-            bottom.column_net: P16
-          key.stagger: 0.15cy
-        inner:
-          rows:
-            top.column_net: P14
-            home.column_net: P15
-            bottom.column_net: P18
+            top.column_net: P006
+            home.column_net: P029
+            bottom.column_net: P113
           key:
             stagger: -0.15cy
             splay: -1
             spread: cx + .3
-        innerReach:
+        indexReach:
           key.stagger: -0.35cy
           rows:
-            home.column_net: P19
+            home.column_net: P031
             bottom.skip: true
             top.skip: true
       rows:
@@ -59,20 +59,20 @@ points:
         top.padding: cy
     thumb:
       anchor:
-        ref: matrix_inner_bottom
+        ref: matrix_index_bottom
         shift: [1.08cx, -1.2cy]
         rotate: -3
       columns:
         tucky:
           key.name: thumb_tucky
-          rows.thumb_tucky.column_net: P20
+          rows.thumb_tucky.column_net: P104
         reachy:
           key.width: cx
           key.spread: cx
           key.splay: -15
           key.shift: [0.15cx,-3]
           key.name: thumb_reachy
-          rows.reachy.column_net: P21
+          rows.reachy.column_net: P106
 outlines:
   raw:
     - what: rectangle
@@ -86,25 +86,25 @@ outlines:
     - what: polygon
       operation: stack
       points:
-        - ref: matrix_pinky_home
+        - ref: matrix_outerReach_home
           shift: [-0.5px, -0.5py]
-        - ref: matrix_pinky_home
+        - ref: matrix_outerReach_home
           shift: [-0.5px, 0.5py]
-        - ref: matrix_pinky_home
+        - ref: matrix_outerReach_home
           shift: [0.35px, 0.5py]
+        - ref: matrix_pinky_top
+          shift: [-0.5px, 0.5py]
         - ref: matrix_ring_top
           shift: [-0.5px, 0.5py]
         - ref: matrix_middle_top
           shift: [-0.5px, 0.5py]
-        - ref: matrix_index_top
-          shift: [-0.5px, 0.5py]
+        - ref: matrix_middle_top
+          shift: [0.5px, 0.5py]
         - ref: matrix_index_top
           shift: [0.5px, 0.5py]
-        - ref: matrix_inner_top
-          shift: [0.5px, 0.5py]
-        - ref: matrix_innerReach_home
+        - ref: matrix_indexReach_home
           shift: [-0.35px, 0.54py]
-        - ref: matrix_innerReach_home
+        - ref: matrix_indexReach_home
           shift: [1.62px, 0.54py]
         - ref: thumb_reachy
           shift: [0.5px, 0.5py]
@@ -116,40 +116,40 @@ outlines:
           shift: [-0.5px, -0.5py]
         - ref: thumb_tucky
           shift: [-0.5px, 0.5py]
-        - ref: matrix_inner_bottom
+        - ref: matrix_index_bottom
           shift: [-0.5px, -0.5py]
-        - ref: matrix_middle_bottom
-          shift: [0.5px, -0.5py]
         - ref: matrix_ring_bottom
           shift: [0.5px, -0.5py]
-        - ref: matrix_ring_bottom
+        - ref: matrix_pinky_bottom
+          shift: [0.5px, -0.5py]
+        - ref: matrix_pinky_bottom
           shift: [-0.5px, -0.5py]
-        - ref: matrix_pinky_home
+        - ref: matrix_outerReach_home
           shift: [0.35px, -0.5py]
       fillet: 4
   xlboard:
     - what: polygon
       operation: stack
       points:
-        - ref: matrix_pinky_home
+        - ref: matrix_outerReach_home
           shift: [-0.5dpx, -0.5dpy]
-        - ref: matrix_pinky_home
+        - ref: matrix_outerReach_home
           shift: [-0.5dpx, 0.5dpy]
-        - ref: matrix_pinky_home
+        - ref: matrix_outerReach_home
           shift: [0.35dpx, 0.5dpy]
+        - ref: matrix_pinky_top
+          shift: [-0.5dpx, 0.5dpy]
         - ref: matrix_ring_top
           shift: [-0.5dpx, 0.5dpy]
         - ref: matrix_middle_top
           shift: [-0.5dpx, 0.5dpy]
-        - ref: matrix_index_top
-          shift: [-0.5dpx, 0.5dpy]
+        - ref: matrix_middle_top
+          shift: [0.5dpx, 0.5dpy]
         - ref: matrix_index_top
           shift: [0.5dpx, 0.5dpy]
-        - ref: matrix_inner_top
-          shift: [0.5dpx, 0.5dpy]
-        - ref: matrix_innerReach_home
+        - ref: matrix_indexReach_home
           shift: [-0.35dpx, 0.54dpy]
-        - ref: matrix_innerReach_home
+        - ref: matrix_indexReach_home
           shift: [1.62dpx, 0.54dpy]
         - ref: thumb_reachy
           shift: [0.5dpx, 0.5dpy]
@@ -161,15 +161,15 @@ outlines:
           shift: [-0.5dpx, -0.5dpy]
         - ref: thumb_tucky
           shift: [-0.5dpx, 0.5dpy]
-        - ref: matrix_inner_bottom
+        - ref: matrix_index_bottom
           shift: [-0.5dpx, -0.5dpy]
-        - ref: matrix_middle_bottom
-          shift: [0.5dpx, -0.5dpy]
         - ref: matrix_ring_bottom
           shift: [0.5dpx, -0.5dpy]
-        - ref: matrix_ring_bottom
+        - ref: matrix_pinky_bottom
+          shift: [0.5dpx, -0.5dpy]
+        - ref: matrix_pinky_bottom
           shift: [-0.5dpx, -0.5dpy]
-        - ref: matrix_pinky_home
+        - ref: matrix_outerReach_home
           shift: [0.35dpx, -0.5dpy]
       fillet: 4
   combo:
@@ -180,33 +180,33 @@ outlines:
     - what: circle
       radius: screwSize
       where:
-          ref: matrix_pinky_home
+          ref: matrix_outerReach_home
           shift: [0.55cx, -0.19cy]
     - what: circle
       radius: screwSize
       where:
-          ref: matrix_inner_top
+          ref: matrix_index_top
           shift: [-0.42cx, 0.55cy]
     - what: circle
       radius: screwSize
       where:
-          ref: matrix_inner_bottom
+          ref: matrix_index_bottom
           shift: [0.55cx, -0.5cy]
   standoff:
     - what: circle
       radius: standoffSize
       where:
-          ref: matrix_pinky_home
+          ref: matrix_outerReach_home
           shift: [0.55cx, -0.19cy]
     - what: circle
       radius: standoffSize
       where:
-          ref: matrix_inner_top
+          ref: matrix_index_top
           shift: [-0.42cx, 0.55cy]
     - what: circle
       radius: standoffSize
       where:
-          ref: matrix_inner_bottom
+          ref: matrix_index_bottom
           shift: [0.55cx, -0.5cy]
 pcbs:
   custom_split:
@@ -223,18 +223,10 @@ pcbs:
           hotswap: true
           from: "{{column_net}}"
           to: GND
-#      choc_through_holes:
-#        what: choc
-#        where: true
-#        params:
-#          keycaps: true
-#          reverse: true
-#          from: "{{column_net}}"
-#          to: GND
       microcontroller:
         what: microcontroller
         where:
-          ref: matrix_innerReach_home
+          ref: matrix_indexReach_home
           rotate: -90
           shift: [1.085cx,-0.445cy]
       reset:
@@ -243,32 +235,32 @@ pcbs:
           from: GND
           to: RST
         where:
-          ref: matrix_innerReach_home
+          ref: matrix_indexReach_home
           shift: [1.745cx, -1.47cy]
           rotate: 90
       switch:
         what: slider
         params: 
-          from: GND
-          to: VCC
+          from: VCC
+          to: RAW
         where:
-          ref: matrix_innerReach_home
+          ref: matrix_indexReach_home
           shift: [1.8cx, 0cy]
           rotate: -90
       holeMidLeft:
         what: mountinghole
         where:
-          ref: matrix_pinky_home
+          ref: matrix_outerReach_home
           shift: [0.55cx, -0.19cy]
       holeTopRight:
         what: mountinghole
         where:
-          ref: matrix_inner_top
+          ref: matrix_index_top
           shift: [-0.42cx, 0.55cy]
       holeBottomMid:
         what: mountinghole
         where:
-          ref: matrix_inner_bottom
+          ref: matrix_index_bottom
           shift: [0.55cx, -0.5cy]
       connector:
         what: jstph
@@ -276,7 +268,7 @@ pcbs:
           pos: RAW
           neg: GND
         where:
-          ref: matrix_innerReach_home
+          ref: matrix_indexReach_home
           shift: [0.3cx, -0.70cy]
 cases:
   bottom:
